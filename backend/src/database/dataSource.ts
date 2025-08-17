@@ -5,7 +5,7 @@ import path from 'path';
 
 export const AppDataSource = new DataSource({
   type: 'sqlite',
-  database: path.join(__dirname, '../../bookings.db'),
+  database: process.env.DB_PATH || path.join(__dirname, '../../bookings.db'),
   synchronize: true,
   logging: process.env.NODE_ENV === 'development',
   entities: [Room, Booking],
