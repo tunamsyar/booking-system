@@ -9,8 +9,6 @@ A full-stack TypeScript application for managing meeting room bookings with real
 - **Development**: Docker Compose with hot reloading
 - **Database**: SQLite with persistent storage
 
-## 📁 Project Structure
-
 ## ✨ Features
 
 ### 🎯 **Core Functionality**
@@ -205,7 +203,7 @@ curl -H "x-user-id: user123" http://localhost:3001/api/bookings
 curl -X POST http://localhost:3001/api/bookings \
   -H "Content-Type: application/json" \
   -H "x-user-id: user123" \
-  -d '{"roomId": 1, "timeSlot": "09:00-10:00"}'
+  -d '{"roomId": 1, "timeSlot": "09:00"}'
 ```
 
 ## 🧪 Testing the Application
@@ -313,6 +311,8 @@ For production deployment, consider:
 - Input validation and sanitization
 - Rate limiting
 - Security headers
+- Configurable Time Slots
+- Admin/Owner panel to manage spaces and time slots
 
 ## 🤝 Contributing
 
